@@ -1,5 +1,8 @@
 #!/usr/bin/with-contenv bash
 
+# create sickrage group
+groupadd -g $SGID sickrage
+
 # create folders
 if [ ! -d "${PLEX_MEDIA_SERVER_APPLICATION_SUPPORT_DIR}" ]; then \
 mkdir -p "${PLEX_MEDIA_SERVER_APPLICATION_SUPPORT_DIR}"
