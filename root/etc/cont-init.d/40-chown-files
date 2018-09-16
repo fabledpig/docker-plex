@@ -3,6 +3,9 @@
 # create sickrage group
 groupadd -g $SGID sickrage
 
+# add user to the sickrage group
+gpasswd -a abc sickrage
+
 # create folders
 if [ ! -d "${PLEX_MEDIA_SERVER_APPLICATION_SUPPORT_DIR}" ]; then \
 mkdir -p "${PLEX_MEDIA_SERVER_APPLICATION_SUPPORT_DIR}"
